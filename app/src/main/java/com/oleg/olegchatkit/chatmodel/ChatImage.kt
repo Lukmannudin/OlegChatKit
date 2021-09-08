@@ -9,4 +9,10 @@ class ChatImage(
     senderId: Long,
     receiverId: Long,
     pictureUrl: String
-) : Chat(id, senderId, receiverId)
+) : Chat(id, senderId, receiverId) {
+
+    override fun accept(viewHolderVisitor: ViewHolderVisitor, layout: String): Int {
+        return viewHolderVisitor.visit(this, layout)
+    }
+
+}

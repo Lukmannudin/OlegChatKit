@@ -9,4 +9,10 @@ class ChatText(
     senderId: Long,
     receiverId: Long,
     message: String
-) : Chat(id, senderId, receiverId)
+) : Chat(id, senderId, receiverId) {
+
+    override fun accept(viewHolderVisitor: ViewHolderVisitor, layout: String): Int {
+        return viewHolderVisitor.visit(this, layout)
+    }
+
+}
