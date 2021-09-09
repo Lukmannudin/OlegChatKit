@@ -10,7 +10,7 @@ import com.oleg.olegchatkit.chatmodel.Chat
 
 class ChatDefaultViewHolder(itemView: View) : BaseViewHolder<Chat>(itemView) {
 
-    override fun bind(mode: Chat) {
+    override fun bind(model: Chat) {
         TODO("Not yet implemented")
     }
 

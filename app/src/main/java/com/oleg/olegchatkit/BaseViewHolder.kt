@@ -8,8 +8,8 @@ import com.oleg.olegchatkit.chatmodel.IChat
  * Crafted by Lukman on 08/09/21.
  **/
 
-abstract class BaseViewHolder<Model: IChat>(view: View) : RecyclerView.ViewHolder(view) {
+abstract class BaseViewHolder<in Model: IChat>(view: View) : RecyclerView.ViewHolder(view) {
 
-    abstract fun bind(mode: Model)
+    abstract fun bind(model: Model)
 
 }
