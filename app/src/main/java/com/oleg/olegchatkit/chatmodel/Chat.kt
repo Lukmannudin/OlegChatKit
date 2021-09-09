@@ -18,8 +18,10 @@ open class Chat(
     }
 
     companion object {
-        const val CHAT_TEXT_VIEW = R.layout.item_chat_text
-        const val CHAT_IMAGE_VIEW = R.layout.item_chat_image
+        const val CHAT_TEXT_OUTGOING_VIEW = R.layout.item_chat_outgoing_text
+        const val CHAT_TEXT_INCOMING_VIEW = R.layout.item_chat_incoming_text
+        const val CHAT_IMAGE_OUTGOING_VIEW = R.layout.item_chat_outgoing_image
+        const val CHAT_IMAGE_INCOMING_VIEW = R.layout.item_chat_incoming_image
         const val CHAT_DEFAULT = R.layout.item_chat_default
     }
 

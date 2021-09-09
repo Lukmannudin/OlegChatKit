@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rvChats = findViewById<RecyclerView>(R.id.rv_chat)
-        val chats = Dummy.produce()
+        val chats = Dummy.produce(this)
 
         val chatAdapter = ChatAdapter()
         chatAdapter.setChats(chats)

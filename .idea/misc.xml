@@ -10,6 +10,9 @@
         <entry key="app/src/main/res/layout/item_chat_default.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/item_chat_image.xml" value="0.23794871794871794" />
         <entry key="app/src/main/res/layout/item_chat_image_sender.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/item_chat_incoming_image.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/item_chat_outgoing.xml" value="0.23498643138612746" />
+        <entry key="app/src/main/res/layout/item_chat_outgoing_text.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/item_chat_receiver.xml" value="0.23970306002939573" />
         <entry key="app/src/main/res/layout/item_chat_sender.xml" value="0.3186619798120289" />
         <entry key="app/src/main/res/layout/item_chat_text.xml" value="0.121875" />

@@ -1,5 +1,7 @@
 package com.oleg.olegchatkit.dummy
 
+import android.content.Context
+import com.oleg.olegchatkit.R
 import com.oleg.olegchatkit.chatmodel.Chat
 import com.oleg.olegchatkit.chatmodel.ChatImage
 import com.oleg.olegchatkit.chatmodel.ChatText
@@ -9,7 +11,7 @@ import com.oleg.olegchatkit.chatmodel.ChatText
  **/
 
 object Dummy {
-    fun produce(): List<Chat> {
+    fun produce(context: Context): List<Chat> {
         val chats = mutableListOf<Chat>()
         chats.add(ChatText(
             1,1, 2, "hallo"
@@ -31,6 +33,15 @@ object Dummy {
         ))
         chats.add(ChatText(
             1,2, 1, "all good, why?"
+        ))
+        chats.add(ChatImage(
+            1,2, 1, "https://i.pinimg.com/originals/d1/8d/3e/d18d3e964fdb8f4cb3c11b0cde7fe3a5.jpg"
+        ))
+        chats.add(ChatText(
+            1,2, 1, context.getString(R.string.lorem_ipsum)
+        ))
+        chats.add(ChatText(
+            1,1, 2, context.getString(R.string.lorem_ipsum)
         ))
         return chats
     }
