@@ -24,6 +24,11 @@ class ChatAdapter : RecyclerView.Adapter<BaseViewHolder<Chat>>() {
         notifyDataSetChanged()
     }
 
+    fun addChat(chat: Chat){
+        this.chats.add(chat)
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Chat> {
         return typeFactory.create(
             LayoutInflater.from(parent.context).inflate(viewType, parent, false),

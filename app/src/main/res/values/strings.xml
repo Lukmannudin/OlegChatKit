@@ -3,4 +3,7 @@
     <string name="chat_desc_incoming_image">incoming chat image</string>
     <string name="chat_desc_outgoing_image">outgoing chat image</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nemo possimus quidem repudiandae. Accusamus accusantium aliquid blanditiis, corporis dignissimos doloremque ducimus ex maiores pariatur possimus quaerat quis, repellendus temporibus totam!</string>
+    <string name="type_something">type something...</string>
+    <string name="send_button">send button</string>
+    <string name="button_camera">button camera</string>
 </resources>
