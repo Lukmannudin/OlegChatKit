@@ -25,8 +25,11 @@ class ChatActivity : AppCompatActivity() {
 
         chatAdapter = ChatAdapter()
         chatAdapter.setChats(chats)
-        binding.rvChat.adapter = chatAdapter
-        binding.rvChat.setHasFixedSize(true)
+        binding.rvChat.apply {
+            adapter = chatAdapter
+            setHasFixedSize(true)
+            itemAnimator = null
+        }
 
         binding.apply {
             ibSendButton.setOnClickListener {
@@ -35,24 +38,24 @@ class ChatActivity : AppCompatActivity() {
         }
     }
 
-    private fun sendMessage(message: String) {
+    fun sendMessage(message: String) {
         binding.edtMessageInput.apply {
             clearFocus()
             setText("")
 
             chatAdapter.addChat(ChatText(13121, 1, 2, message))
+            scroolToLastPosition()
 
             // clear keyboard
             val imm: InputMethodManager =
                 getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(this.windowToken, 0)
 
-            scroolToLastPosition()
         }
     }
 
     private fun scroolToLastPosition() {
-        binding.rvChat.scrollToPosition(chatAdapter.itemCount)
+        binding.rvChat.smoothScrollToPosition(chatAdapter.itemCount)
     }
 
 }
