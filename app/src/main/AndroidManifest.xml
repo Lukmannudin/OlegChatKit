@@ -13,6 +13,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.OlegChatKit">
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".ChatActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"

@@ -2,6 +2,9 @@ package com.oleg.olegchatkit
 
 import android.content.Context
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.KeyboardShortcutGroup
+import android.view.Menu
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.oleg.olegchatkit.chatmodel.ChatText
@@ -23,6 +26,7 @@ class ChatActivity : AppCompatActivity() {
         chatAdapter = ChatAdapter()
         chatAdapter.setChats(chats)
         binding.rvChat.adapter = chatAdapter
+        binding.rvChat.setHasFixedSize(true)
 
         binding.apply {
             ibSendButton.setOnClickListener {
@@ -42,7 +46,13 @@ class ChatActivity : AppCompatActivity() {
             val imm: InputMethodManager =
                 getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(this.windowToken, 0)
+
+            scroolToLastPosition()
         }
+    }
+
+    private fun scroolToLastPosition() {
+        binding.rvChat.scrollToPosition(chatAdapter.itemCount)
     }
 
 }

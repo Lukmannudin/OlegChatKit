@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/bg_message_input.xml" value="0.25384615384615383" />
         <entry key="app/src/main/res/drawable/bg_sender.xml" value="0.2578125" />
         <entry key="app/src/main/res/drawable/ic_photo_camera.xml" value="0.25384615384615383" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3108769229534565" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/item_chat_default.xml" value="0.24166666666666667" />

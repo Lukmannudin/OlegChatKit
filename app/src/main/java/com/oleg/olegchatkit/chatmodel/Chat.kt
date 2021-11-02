@@ -2,6 +2,7 @@ package com.oleg.olegchatkit.chatmodel
 
 import com.oleg.olegchatkit.R
 import com.oleg.olegchatkit.viewholders.ViewHolderTypeFactory
+import java.util.*
 
 /**
  * Crafted by Lukman on 07/09/21.
@@ -10,7 +11,8 @@ import com.oleg.olegchatkit.viewholders.ViewHolderTypeFactory
 open class Chat(
     open val id: Long,
     open val senderId: Long,
-    open val receiverId: Long
+    open val receiverId: Long,
+    open val date: Date
 ) : IChat {
 
     override fun type(viewHolderTypeFactory: ViewHolderTypeFactory): Int {
