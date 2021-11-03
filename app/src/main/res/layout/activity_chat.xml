@@ -17,70 +17,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.oleg.olegchatkit.MessageInput
         android:id="@+id/cl_message_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lynx_white"
-        android:elevation="8dp"
-        android:minHeight="60dp"
-        android:outlineProvider="bounds"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_chat">
-
-        <ImageButton
-            android:id="@+id/ib_camera_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/large_spacing"
-            android:layout_marginBottom="@dimen/large_spacing"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/button_camera"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_photo_camera"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <View
-            android:id="@+id/v_message_input_divider"
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_marginVertical="@dimen/large_spacing"
-            android:layout_marginStart="@dimen/large_spacing"
-            android:background="@color/silver"
-            app:layout_constraintBottom_toBottomOf="@id/cl_message_input"
-            app:layout_constraintStart_toEndOf="@id/ib_camera_icon"
-            app:layout_constraintTop_toTopOf="@id/cl_message_input" />
-
-        <EditText
-            android:id="@+id/edt_message_input"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:autofillHints="@string/type_something"
-            android:background="@null"
-            android:hint="@string/type_something"
-            android:inputType="textMultiLine"
-            android:padding="@dimen/standard_padding"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ib_send_button"
-            app:layout_constraintStart_toStartOf="@id/v_message_input_divider"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/ib_send_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="@dimen/large_spacing"
-            android:layout_marginBottom="@dimen/standard_spacing"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/send_button"
-            android:focusable="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_send"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@id/rv_chat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

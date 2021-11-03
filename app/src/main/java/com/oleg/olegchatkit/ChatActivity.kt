@@ -1,11 +1,7 @@
 package com.oleg.olegchatkit
 
-import android.content.Context
 import android.os.Bundle
-import android.view.KeyEvent
-import android.view.KeyboardShortcutGroup
-import android.view.Menu
-import android.view.inputmethod.InputMethodManager
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.oleg.olegchatkit.chatmodel.ChatText
 import com.oleg.olegchatkit.databinding.ActivityChatBinding
@@ -31,26 +27,21 @@ class ChatActivity : AppCompatActivity() {
             itemAnimator = null
         }
 
-        binding.apply {
-            ibSendButton.setOnClickListener {
-                sendMessage(binding.edtMessageInput.text.toString())
+        binding.clMessageInput.apply {
+
+            onSendClickListener = {
+
+            }
+            getSendMessageButtonClickListener {
+                sendMessage(getSendMessage())
             }
         }
     }
 
     fun sendMessage(message: String) {
-        binding.edtMessageInput.apply {
-            clearFocus()
-            setText("")
-
+        binding.clMessageInput.apply {
             chatAdapter.addChat(ChatText(13121, 1, 2, message))
             scroolToLastPosition()
-
-            // clear keyboard
-            val imm: InputMethodManager =
-                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(this.windowToken, 0)
-
         }
     }
 
